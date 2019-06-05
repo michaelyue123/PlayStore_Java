@@ -4,7 +4,8 @@ The program I have created will allow the creation of a store, filling it with p
 
 ## Program Execution
 ```
-javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+javac *.java
+```
+```
+java PlayStoreMain
 ```
