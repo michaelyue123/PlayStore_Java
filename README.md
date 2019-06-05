@@ -5,7 +5,8 @@ The program I have created will allow the creation of a store, filling it with p
 There are 7 options you can choose from and they are listed below:
 * dsdsd
 * sdsdsd
-
+- dsds
++ dsds
 ## Program Execution
 ```
 cd foldername
