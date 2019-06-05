@@ -3,7 +3,8 @@ A **PlayStore** is a standalone digital marketplace that allows users to browse 
 The program I have created will allow the creation of a store, filling it with products, creating users and simulating their interaction with the store (purchasing products, adding comments etc).
 
 ## Program Execution
-```javascript
+```
+javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
