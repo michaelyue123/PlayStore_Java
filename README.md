@@ -4,8 +4,13 @@ The program I have created will allow the creation of a store, filling it with p
 
 ## Program Execution
 ```
+cd target foldername
+```
+
+```
 javac *.java
 ```
+
 ```
 java PlayStoreMain
 ```
