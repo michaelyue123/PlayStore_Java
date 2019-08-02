@@ -1,14 +1,26 @@
-//create a class Comment
+
 class Comment {
-	// instance variable with default modifiers
-	User user;
-	String comment;
+	private User user;
+	private String comment;
 	
-	// create Comment constructor with instantiated variables
 	public Comment(User user, String comment) {
 		this.user = user;
 		this.comment = comment;
 	}
 	
+	public User getUser() {
+		return this.user;
+	}
 	
+	public void setUser(User newUser) {
+		this.user = newUser;
+	}
+	
+	public String getComment() {
+		return this.comment;
+	}
+	
+	public void setComment(String newComment) {
+		this.comment = newComment;
+	}
 }
