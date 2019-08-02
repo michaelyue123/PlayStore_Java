@@ -1,29 +1,41 @@
 import java.util.*;
 
-//create a class Publication
 class Publication extends Content {
-	// subclass instance variables
-	protected String publisher;
-	protected int numPage;
+	private String publisher;
+	private int numPage;
 	
-	public Publication(String contentID, String name, int downNum, double price, ArrayList<Comment> comments, 
-			String publisher, int numPage) {
+	public Publication(String contentID, String name, int downNum, double price, 
+			ArrayList<Comment> comments, String publisher, int numPage) {
 		super(contentID, name, downNum, price, comments);
 		this.publisher = publisher;
-		this.numPage = numPage;	
+		this.numPage = numPage;
 	}
-
-	@Override
+	
+	public String getPublisher() {
+		return publisher;
+	}
+	
+	public void setPublisher(String newPublisher) {
+		this.publisher = newPublisher;
+	}
+	
+	public int getnumPage() {
+		return numPage;
+	}
+	
+	public void setNumPage(int newNumPage) {
+		this.numPage = newNumPage;
+	}
+	
 	public void addReview(Comment comment) {
-		this.comments.add(comment); // add comment to Publication
-	} 
-
-	@Override
+		this.getComment().add(comment);
+	}
+	
 	public ArrayList<Comment> showComments() {
-		return this.comments; // return the list of comments for Publication
-	}	
-	@Override
+		return this.getComment();
+	}
+	
 	public void removeReview(Comment comment) {
-		this.comments.remove(comment); // remove comment from Publication
+		this.getComment().remove(comment);
 	}
 }
