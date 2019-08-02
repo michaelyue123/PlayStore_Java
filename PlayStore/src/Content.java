@@ -1,56 +1,77 @@
 import java.util.*;
 
-// create an abstract class Content
-abstract class Content {
-	// instance variables
-	protected String contentID;
-	protected String name;
-	protected int downNum;
-	protected double price;
-	protected ArrayList<Comment> comments = new ArrayList<Comment>();
+abstract public class Content {
+	private String contentID;
+	private String name;
+	private int downNum;
+	private double price;
+	private ArrayList<Comment> comments = new ArrayList<Comment>();
 	
-	// create a Content constructor with different instantiated variables
+	
 	public Content(String contentID, String name, int downNum, double price, ArrayList<Comment> comments) {
 		this.contentID = contentID;
 		this.name = name;
 		this.downNum = downNum;
 		this.price = price;
-		this.comments = comments; 
+		this.comments = comments;
 	}
-	// call default constructor and set the initial value of downNum as 0 and the reviews are empty
-	// overloading
+	
 	public Content(String contentID, String name, double price, ArrayList<Comment> comments) {
 		this(contentID, name, 0, price, comments);
 	}
 	
-	// getters
-	public String getID() {
+	// getter
+	public String getContentID() {
 		return contentID;
+	}
+	// setter
+	public void setCotentID (String newContentID) {
+		this.contentID = newContentID;
 	}
 	
 	public String getName() {
 		return name;
 	}
-	// create a method called getPrice
+	
+	public void setName (String newName) {
+		this.name = newName;
+	}
+	
+	public int getDownNum() {
+		return downNum;
+	}
+	
+	public void setDownNum(int downN) {
+		this.downNum = downN;
+	}
+	
 	public double getPrice() {
 		return price;
 	}
 	
-	// increases the number of downloads by 1
+	public void setPrice (double newPrice) {
+		this.price = newPrice;
+	}
+	
+	public ArrayList<Comment> getComment() {
+		return comments;
+	}
+	
+	public void setComment(ArrayList<Comment> newComment) {
+		this.comments = newComment;
+	}
+	
 	public void increaseDownloads() {
 		downNum++;
 	}
 	
-	// create a method called addReview
-	public void addReview(Comment comment) {
-		comments.add(comment);
-	}; 
+	public void addReview(Comment c) {
+		comments.add(c);
+	}
 	
-	// create an abstract method called showComments
 	public abstract ArrayList<Comment> showComments();
 	
-	// create a method called removeReview
-	public void removeReview(Comment comment) {
-		comments.remove(comment);
-	}
+	public void removeReview(Comment c) {
+		comments.remove(c);
+	}	
 }
