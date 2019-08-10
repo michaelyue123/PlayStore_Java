@@ -93,7 +93,7 @@ public class PlayStoreMain {
         
         Scanner input = new Scanner(System.in);
         
-        while(true) {
+        while(option != 7) {
         	showMenu();
         	System.out.println("Enter your choice");
         	choice = input.nextLine();
